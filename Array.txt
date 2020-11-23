@@ -1,0 +1,14 @@
+Python List functions
+append() - add to end of list
+clear() - removes all items from list
+copy() - returns shallow copy of list
+count(element) - returns count of element in list
+extend(iterable) - all elements of iterable added to end of list
+index(element) - returns index of element in list
+insert(i, element) - inserts element to index i and moves everything else to the right
+pop(index) - removes item at index, returns removed item
+remove(element) - removes element from list
+reverse() - reverses list
+sort() - sorts. changes list directly without returning anything (default ascending order)
+sort(reverse=True) - sorts in descending order
+sort(key=somekey) - if you're sorting list of objects, you can sort by object.key (like Person.age)
