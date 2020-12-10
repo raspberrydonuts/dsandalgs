@@ -1,0 +1,24 @@
+Python String functions
+lower() - takes string and returns makes all letters lowercase. Have to reassign since it returns another string
+upper() - takes string and returns all letters uppercase
+count(value) - returns number of times value appears in string
+find(value) - returns first occurrence (index) of specified value
+rfind(value) - returns last occurence (index) of specified value
+isalpha() - returns True if all characters are in the alphabet
+isdigit() - returns True if all characters are digits
+isalnum() - returns True if all characters are alphanumeric (both letter and number)
+islower() - returns True if all characters in string are lower case
+isupper() - returns True if all characters in string are upper case
+isnumeric() - return True if all characters in the string are numeric
+join() - joins elements of iterable to end of string.
+	ex. 
+		myTuple = ("John", "Peter", "Vicky")
+		x = "/".join(myTuple)
+		print(x)
+		// x -> "John/Peter/Vicky"
+replace(oldvalue, newvalue) - returns a string where oldvalue is replaced with newvalue
+split(separator) - splits the string at the specified separator and returns a list. if no paramters, default is whitespace
+swapcase() - lower case becomes upper case and vice versa
+
+
+
