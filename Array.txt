@@ -6,9 +6,13 @@ count(element) - returns count of element in list
 extend(iterable) - all elements of iterable added to end of list
 index(element) - returns index of element in list
 insert(i, element) - inserts element to index i and moves everything else to the right
-pop(index) - removes item at index, returns removed item
+pop(index) - removes item at index, returns removed item. No argument defaults to last item.
 remove(element) - removes element from list
 reverse() - reverses list
 sort() - sorts. changes list directly without returning anything (default ascending order)
 sort(reverse=True) - sorts in descending order
 sort(key=somekey) - if you're sorting list of objects, you can sort by object.key (like Person.age)
+
+
+You can use Python's built in List for a stack data structure as well using append() and pop() since both are amortized O(1) operations.
+You can also use Python's built in List for queue data structure with append() and pop(0). Also O(1), except since we have to do pop(0), inserting or deleting at beginning of queue requires shifting, which is O(n). Thus Python lists are slow for queues.
