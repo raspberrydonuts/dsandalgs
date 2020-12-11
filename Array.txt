@@ -16,3 +16,13 @@ sort(key=somekey) - if you're sorting list of objects, you can sort by object.ke
 
 You can use Python's built in List for a stack data structure as well using append() and pop() since both are amortized O(1) operations.
 You can also use Python's built in List for queue data structure with append() and pop(0). Also O(1), except since we have to do pop(0), inserting or deleting at beginning of queue requires shifting, which is O(n). Thus Python lists are slow for queues.
+
+Time Complexities:
+            Avg       Worst
+Access      O(1)        O(1)
+Search      O(n)        O(n)
+Insert      O(n)        O(n)
+Delete      O(n)        O(n)
+
+Space Complexity:
+Worst - O(n)
