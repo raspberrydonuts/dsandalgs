@@ -11,22 +11,85 @@
 
 
 class Node:
-	def __init__(self, val=0, next=None):
-    	self.val = val
-        self.next = next
-        
-        
-class LinkedList:
-	def __init__(self, head):
-    	self.head = head
-        
-    def printList(self):
-    
-    def insert(self, index):
+	def __init__(self, val=0):
+		self.val = val
+		self.next = None
 
-	def insertAtEnd(self):
-    
-    def remove(self, index):
-    
-    def copy(self):
-    
+class LinkedList:
+	# head is a node
+	def __init__(self, head):
+		self.head = head
+
+	def size(self):
+		ptr = self.head
+		counter = 0
+		while ptr is not None:
+			ptr = ptr.next
+			counter += 1
+		return counter
+
+	def printList(self):
+		ptr = self.head
+		while ptr is not None:
+			print(ptr.val, end=" ")
+			ptr = ptr.next
+		print("\n")
+
+	def insert(self, node, index):
+		counter = 0
+		cur = None
+		next = self.head
+		while counter < index:
+			cur = next
+			next = next.next
+			counter += 1
+		if cur is not None:
+			cur.next = node
+		node.next = next
+		if index == 0:
+			self.head = node
+
+	def insertAtEnd(self, node):
+		ptr = self.head
+		while ptr.next is not None:
+			 ptr = ptr.next
+		ptr.next = node
+
+	def remove(self, node):
+		counter = 0
+		prev = Node(0)  # dummy
+		cur = self.head
+		while cur.val != node.val:
+			prev = cur
+			cur = cur.next
+		if cur == self.head:
+			self.head = self.head.next
+		prev.next = cur.next
+
+def main():
+	zero = Node(0)
+	one = Node(1)
+	two = Node(2)
+	three = Node(3)
+	zero.next = one
+	one.next = two
+	two.next = three
+	lst = LinkedList(zero)
+	lst.printList()
+	four = Node(4)
+	lst.insert(four, 4)
+	lst.printList()
+	twoPointFive = Node(2.5)
+	lst.insert(twoPointFive, 3)
+	lst.printList()
+	negOne = Node(-1)
+	lst.insert(negOne, 0)
+	lst.printList()
+	lst.insertAtEnd(Node(5))
+	lst.printList()
+	lst.remove(twoPointFive)
+	lst.printList()
+	print("Size is: " + str(lst.size()))
+
+if __name__ == "__main__":
+    main()
