@@ -8,12 +8,7 @@
 
 # Space Complexity:
 # Worst - O(n)
-
-
-class Node:
-	def __init__(self, val=0):
-		self.val = val
-		self.next = None
+from Node import Node
 
 class LinkedList:
 	# head is a node

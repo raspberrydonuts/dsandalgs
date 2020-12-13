@@ -1,1 +1,25 @@
-Sets and Dictionaries in Python
+Dictionaries in Python
+len(dict) - return number of items in the dictionary
+clear() - remove all elements
+copy() - returns copy of dictionary
+get(key) - does same as indexing with dict[key]
+items() - returns a list containing a tuple for each key value pair
+keys() - returns a list containing the dictionary's keys
+pop(key) - remove element with specified key
+popitem() - removes last inserted key-value pair
+values() - returns a list of values
+
+OrderedDict (useful for problems like LRU cache)
+`from collections import OrderedDict`
+Notes:
+  - If the value of a certain key is changed, the position of the key remains
+    unchanged in OrderedDict.
+  - Deleting and re-inserting the same key will push it to the back as
+    OrderedDict however maintains the order of insertion
+  - can be used as stack with popitem(). removes item at end (LIFO)
+    if you use popitem(last=False), then remove item at beginning (FIFO)
+move_to_end(key) - moves key to end (to the right) of ordered dictionary
+if move_to_end(last=False), then move key to beginning
+
+use update() if need to update values
+  ex. car.update({"color": "White"})
