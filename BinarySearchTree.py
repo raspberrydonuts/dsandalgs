@@ -68,8 +68,7 @@ class BinarySearchTree:
         print(node.val)
 
     # this is just traversal in BFS fashion
-    def printLevelOrder(self, node):
-
+    # def printLevelOrder(self, node):
 
     def insert(self, key, root):
         if root is None:
@@ -93,10 +92,6 @@ class BinarySearchTree:
         if root.val < key:
             return self.search(key, root.right)
         return self.search(key, root.left)
-
-    # def bfs(self, key, root):
-    #
-    # def dfs(self, key, root):
 
     def isValidBSTHelper(self, root, min, max):
         if root is None:
