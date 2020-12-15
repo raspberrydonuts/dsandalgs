@@ -68,7 +68,17 @@ class BinarySearchTree:
         print(node.val)
 
     # this is just traversal in BFS fashion
-    # def printLevelOrder(self, node):
+    def printLevelOrder(self, root):
+        # iterative implementation using a queue
+        queue = []
+        queue.append(root)
+        while(len(queue)>0):
+            node = queue.pop(0)
+            print(node.val)
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
 
     def insert(self, key, root):
         if root is None:
@@ -128,6 +138,10 @@ def main():
     six.left = five
     six.right = seven
 
+    print("\n\n")
+    print("level order")
+    bst.printLevelOrder(bst.root)
+    print("\n\n")
     print("in order ")
     bst.printInOrder(bst.root)
     print("\n\n")
@@ -162,6 +176,7 @@ def main():
     bst.insert(8, bst.root)
     bst.insert(2.5, bst.root)
     bst.printInOrder(bst.root)
+
 
 
 
